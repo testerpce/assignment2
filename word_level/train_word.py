@@ -12,7 +12,7 @@ import os
 
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
-session = tf.Session(config=config, ...)
+session = tf.Session(config=config)
 
 from traitlets import Bunch
 
