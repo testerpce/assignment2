@@ -40,6 +40,8 @@ with tf.Session() as sess:
         else:
             val = int(np.argmax(prob[0]))
         c = value_char[val]
+        if c=='.' or c=='?' or c=='!':
+        	break
         sentence += c
 
 print(sentence)
