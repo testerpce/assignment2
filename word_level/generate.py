@@ -39,6 +39,8 @@ with tf.Session() as sess:
         prob, state = sess.run([model.probs, model.final_state], feed)
         val = int(np.searchsorted(np.cumsum(prob[0]), np.random.rand(1)))
         c = value_word[val]
+        if c=='.' or c=='?' or c=='!':
+        	break
         sentence += [c]
 
 print(' '.join(sentence))
